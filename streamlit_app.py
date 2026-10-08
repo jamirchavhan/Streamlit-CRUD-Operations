@@ -24,7 +24,7 @@ with st.form("add_student"):
         else:
             try:
                 load_dotenv()
-                DATABASE_URL = "postgresql://postgres:ehqLAElnOmwRu7Ix@db.ysnlxhjmzlhucbcgtdkh.supabase.co:5432/postgres"
+                DATABASE_URL = "postgresql://postgres.ysnlxhjmzlhucbcgtdkh:[YOUR-PASSWORD]@aws-0-ap-south-1.pooler.supabase.com:5432/postgres"
                 connection = psycopg2.connect(DATABASE_URL)
 
                 cursor = connection.cursor()
@@ -57,7 +57,7 @@ st.header("📋 Student List")
 try:
 
     load_dotenv()
-    DATABASE_URL = "postgresql://postgres:ehqLAElnOmwRu7Ix@db.ysnlxhjmzlhucbcgtdkh.supabase.co:5432/postgres"
+    DATABASE_URL = "postgresql://postgres.ysnlxhjmzlhucbcgtdkh:[YOUR-PASSWORD]@aws-0-ap-south-1.pooler.supabase.com:5432/postgres"
     connection = psycopg2.connect(DATABASE_URL)
     cursor = connection.cursor()
 
@@ -111,7 +111,7 @@ try:
 
             try:
                 load_dotenv()
-                DATABASE_URL = "postgresql://postgres:ehqLAElnOmwRu7Ix@db.ysnlxhjmzlhucbcgtdkh.supabase.co:5432/postgres"
+                DATABASE_URL = "postgresql://postgres.ysnlxhjmzlhucbcgtdkh:[YOUR-PASSWORD]@aws-0-ap-south-1.pooler.supabase.com:5432/postgres"
                 connection = psycopg2.connect(DATABASE_URL)
                 cursor = connection.cursor()
 
@@ -142,7 +142,7 @@ if "edit_id" in st.session_state:
     try:
 
         load_dotenv()
-        DATABASE_URL = "postgresql://postgres:ehqLAElnOmwRu7Ix@db.ysnlxhjmzlhucbcgtdkh.supabase.co:5432/postgres"
+        DATABASE_URL = "postgresql://postgres.ysnlxhjmzlhucbcgtdkh:[YOUR-PASSWORD]@aws-0-ap-south-1.pooler.supabase.com:5432/postgres"
         connection = psycopg2.connect(DATABASE_URL)
         cursor = connection.cursor()
 
@@ -197,7 +197,7 @@ if "edit_id" in st.session_state:
                 if update:
 
                     load_dotenv()
-                    DATABASE_URL = "postgresql://postgres:ehqLAElnOmwRu7Ix@db.ysnlxhjmzlhucbcgtdkh.supabase.co:5432/postgres"
+                    DATABASE_URL = "postgresql://postgres.ysnlxhjmzlhucbcgtdkh:[YOUR-PASSWORD]@aws-0-ap-south-1.pooler.supabase.com:5432/postgres"
                     connection = psycopg2.connect(DATABASE_URL)
                     cursor = connection.cursor()
 
