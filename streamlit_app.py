@@ -44,7 +44,7 @@ with st.form("add_student"):
                 st.success("Student added successfully!")
                 st.rerun()
 
-            except mysql.connector.Error as e:
+            except psycopg2.Error as e:
                 st.error(f"Database error: {e}")
 
             finally:
@@ -128,10 +128,10 @@ try:
                 st.success(f"{name} deleted successfully!")
                 st.rerun()
 
-            except mysql.connector.Error as e:
+            except psycopg2.Error as e:
                 st.error(f"Database error: {e}")
 
-except mysql.connector.Error as e:
+except psycopg2.Error as e:
     st.error(f"Database error: {e}")
 
 
@@ -232,5 +232,5 @@ if "edit_id" in st.session_state:
                     del st.session_state["edit_id"]
                     st.rerun()
 
-    except mysql.connector.Error as e:
+    except psycopg2.Error as e:
         st.error(f"Database error: {e}")
